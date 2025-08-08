@@ -1,0 +1,14 @@
+**/*.log
+**/*.aux
+**/*.out
+**/*.bbl
+**/*.blg
+**/*.xml
+**/*.fls
+**/*.gz
+**/*.fdb_*
+**/*.synctex.gz
+**/*.upa
+**/*.upb
+*.pdf
+*.synctex*

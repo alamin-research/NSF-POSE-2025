@@ -1,0 +1,145 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{proposal}[2025/04/14 Custom citation formatting and biblatex config]
+
+\RequirePackage{caption}
+\RequirePackage[skins,listings,theorems]{tcolorbox}
+\RequirePackage{titlesec}
+
+
+% University of Dayton colors
+\definecolor{FlyersBlue}{HTML}{003087}
+\definecolor{FlyersRed}{HTML}{CE0037}
+\definecolor{FlyersRedDamp}{HTML}{CE1141}
+
+
+% 1) Declare two new label‐formats:
+\DeclareCaptionLabelFormat{flyersRed}{\textcolor{FlyersRed}{#1~#2}}
+\DeclareCaptionLabelFormat{flyersBlue}{\textcolor{FlyersBlue}{#1~#2}}
+
+% 2) Apply them globally:
+\captionsetup[figure]{labelformat=flyersRed, labelsep=colon}
+\captionsetup[table]{labelformat=flyersBlue, labelsep=colon}
+
+\newtcolorbox{mybox}[2][]{
+	colback=white,
+	colframe=FlyersBlue,fonttitle=\bfseries,
+	colbacktitle=FlyersBlue,enhanced,
+	attach boxed title to top center={yshift=-2mm},
+	title={#2},
+	width=0.99\textwidth, % Set the width to 99% of the text width
+	left=5pt, right=5pt, % Reduce left and right padding inside the box
+	boxsep=3 mm, % Reduce the distance between the content and the border
+	before skip=1mm, after skip=1mm % Control space before and after the box
+	}
+	
+\newtcolorbox{myDashedBox}[2][]{
+	colback=white, colframe=FlyersRed, fonttitle=\bfseries, colbacktitle=FlyersRed, enhanced,
+	attach boxed title to top center={yshift=-2pt}, title={#2},
+	boxrule=1pt, % Thickness of the dashed lines
+	borderline={0pt}{0pt}{FlyersRed!15!white, dashed},
+	width=0.99\textwidth, % Set the width to 99% of the text width
+	left=-10pt, right=10pt, % Reduce left and right padding inside the box
+	boxsep=0mm, % Reduce the distance between the content and the border
+	before skip=2mm, after skip=2mm % Control space before and after the box
+}
+
+\NewTColorBox{solidtcb}{s O{blue!20} D(){white!20} m D<>{.8\linewidth} !O{} }
+	{enhanced, arc is curved,colbacktitle=#2,%
+		colback=#3,colframe=black!75!white,arc=3mm,%
+		coltitle=black, fontupper=\normalsize,fonttitle=\bfseries,%
+		attach boxed title to top \IfBooleanTF{#1}{left}{center}={yshift=-2mm},%
+		title={#4},%
+		width=#5, center,% 
+		left=2pt, right=2pt, top=4pt, bottom=2pt, % Adjust padding here
+		#6}
+
+\NewTColorBox{dashtcb}{s O{gray} m D<>{.8\linewidth} !O{} }
+{enhanced,frame empty,interior empty,colframe=#2!75!white,arc=3mm,%
+	coltitle=#2!50!black, colbacktitle=#2!15!white,%
+	fonttitle=\bfseries, fontupper=\normalsize,% 
+	borderline={0.5mm}{0mm}{#2!15!white},%
+	borderline={0.5mm}{0mm}{#2!50!white,dashed},%
+	attach boxed title to top \IfBooleanTF{#1}{left}{center}={yshift=-2mm},%
+	boxed title style={boxrule=0.4pt},title={#3},%
+	width=#4, center, 
+	#5}
+
+\NewTColorBox{graytcb}{O{black} D<>{\linewidth} !O{}}
+{enhanced,
+ colback=gray!8,          % Background color
+ colframe=#1,             % Outer frame color (default: black)
+ arc=3mm,
+ boxrule=0.5pt,
+ width=#2,
+ center,
+ #3}
+ 
+ \NewTColorBox{redtcb}{O{black} D<>{\linewidth} !O{}}
+ {enhanced,
+ 	colback=orange!6,
+ 	colframe=#1,
+ 	arc=3mm,             % <-- keeps rounded corners
+ 	boxrule=0.5pt,
+ 	width=#2,
+ 	left=1pt,
+ 	right=1pt,
+ 	top=1pt,
+ 	bottom=1pt,
+ 	boxsep=1pt,
+ 	outer arc=3mm,       % <-- matches arc for rounded outer edges
+ 	before skip=0pt,
+ 	after skip=0pt,
+ 	parskip=1pt,
+ 	#3
+ }
+ 
+
+\NewTColorBox{basictcb}{s O{gray!30} D(){black!75!white} m D<>{.8\linewidth} !O{} }
+    {arc is curved,%
+    colback=#2,colframe=#3,arc=3mm,% 
+    fontupper=\normalsize,%
+    \IfBooleanT{#1}{center title},title={#4},%
+    width={#5},center,
+    #6}
+
+
+\titleformat{\section}
+	{\normalfont\Large\bfseries\color{FlyersBlue}} % Format for \section
+{\thesection}{1em}{}	
+
+% title spacing for section is \titlespacing{\section}{left}{before}{after}
+
+\titlespacing{\section}{0pt}{0pt}{0pt}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{FlyersBlue}} % Format for \subsection
+  {\thesubsection}{5pt}{}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+
+\titleformat{\subsubsection}
+  {\normalfont\large\bfseries\color{FlyersRedDamp}} % Format for \subsection
+  {\thesubsubsection}{5pt}{}
+\titlespacing{\subsubsection}{0pt}{2pt}{0pt}
+
+% Adjust text justification (disable hyphenation)
+\sloppy         % Loosens the spacing constraints for justification
+\hyphenpenalty=10000  % Prevents hyphenation
+\exhyphenpenalty=10000  % Prevents hyphenation after explicit hyphenation points  
+\hbadness=99999
+\setlength{\parskip}{2pt} % Set the space between paragraphs to 2pt
+
+\newcommand{\smaltJustify}[1]{%
+\vspace{0pt}% Remove unwanted spaces before the paragraph
+\begingroup%
+\sloppy% Prevents hyphenation and allows lines to stretch
+\justifying%
+\setlength{\parskip}{0pt}%
+\setlength{\parindent}{25pt}%
+#1%
+\par% End paragraph correctly
+\endgroup%
+\vspace{0pt}% Remove unwanted spaces after the paragraph
+}
+
+
+\endinput
