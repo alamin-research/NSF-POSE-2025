@@ -81,13 +81,61 @@ This Phase-I research aims at a structured transition of FAME (https://github.co
 \noindent
 This project will advance the FAME framework into a sustainable, community-driven open-source ecosystem (OSE) that supports high-fidelity thermal-fluid simulations for additive manufacturing (AM) and s\CO{2}-based thermal management. Emphasizing reproducibility, modularity, and extensibility, FAME integrates data-augmented modeling with ray-tracing-based radiative heat transfer to accurately capture beam-powder interactions and phase change dynamics key to understanding defect formation, microstructure evolution, and thermal system performance. Designed for heterogeneous CPU/GPU architectures, the framework supports scalable simulations and enables rapid iteration. By coupling physics-based solvers with modern ML libraries, it provides a rigorous platform to develop and validate AI/ML methods for surrogate modeling, real-time optimization, and intelligent process control. The project will formalize a flexible architectural design and foster a distributed contributor base to sustain long-term innovation. Integrated training resources will support the onboarding of new users, reducing entry barriers while enabling participation in advancing computational methods for intelligent manufacturing and energy systems.
 \vspace{-3pt}
+\section*{Context of OSE}
+\vspace{-3pt}
+\noindent
+Describe the long-term vision and guiding principles for the proposed OSE, such as fostering collaborative, inclusive development to ensure sustainability and ethical use. Outline specific societal or national needs addressed (e.g., bridging gaps in accessible AI for underserved communities, enhancing U.S. competitiveness in sustainable tech). Anticipate broader impacts, including economic benefits, STEM diversity, and ethical advancements.
+\begin{enumerate}
+    \item \textbf{Pointer to Existing Open-Source Product:} The product is available in [Inline Citation to Repository, e.g., GitHub repo listed in References Cited].
+    \item \textbf{Current Status:} Detail the development and testing model (e.g., agile with automated CI/CD pipelines), dissemination methods (e.g., via GitHub releases and academic conferences), user base (e.g., 200+ active users from academia and industry, evidenced by download metrics and feedback), and contributor base (e.g., 8 core contributors and 15 occasional ones).
+    \item \textbf{Problem Addressed and Novelty:} Describe the problem (e.g., lack of open tools for real-time climate data analysis) and the product's novelty (e.g., unique integration of machine learning with edge computing, superior to proprietary alternatives like [cite existing solutions]). Provide substantiating evidence (e.g., user testimonials, citation counts, or pilot study results showing 30\% efficiency gains).
+    \item \textbf{Team Qualifications:} Justify the team's expertise (e.g., PI has 10+ years in open-source software development, co-PIs have led similar ecosystem transitions; include synergistic activities from biosketches).
+\end{enumerate}
+
+
 \section*{Broader Impacts}
 \vspace{-3pt}
 \noindent
 The FAME OSE ecosystem will democritize access to advanced thermal-fluid simulation and AI-assisted design tools across the manufacturing and energy sectors. A central aim is to train the next generation of researchers, engineers, and developers in open-source software development, digital twin technologies, and thermo-fluid modeling specific to manufacturing and energy. The project will offer annual hands-on workshops and summer schools focused on software sustainability and domain-specific applications. A targeted talent development initiative will engage institutions across various geographic regions through customized outreach and curriculum modules, helping to prepare a skilled, workforce-ready STEM pipeline. Research outcomes and practical use cases will be shared through peer-reviewed publications, conference tutorials, and freely accessible training materials hosted on the project's online platform and amplified through social media. By fostering a community grounded in open science, reproducibility, and collaborative development, this initiative will advance U.S. priorities in energy and manufacturing while ensuring the long-term sustainability of the FAME platform.
 
-\newpage 
-% \vspace*{-10pt}
+
+\section*{Risk Analysis/Security Plan}
+\vspace{-3pt}
+\noindent
+Identify project-relevant risks, such as contributor attrition, security vulnerabilities in code, data privacy issues, or ethical concerns in AI outputs. Reference guidance from CISA/NSA on securing software supply chains and OpenSSF best practices (e.g., adopting SLSA for build integrity).
+Mitigation strategies: Implement vulnerability scanning tools (e.g., during scoping audits), establish policies for patching (e.g., within 30 days of discovery), ensure data privacy via anonymization and compliance with GDPR-like standards, and maintain chain of custody through version control. Discuss Phase I activities to explore mechanisms for quality assurance, secure content integration (e.g., code reviews), identity/access management (e.g., multi-factor authentication for contributors), and safety/privacy risks (e.g., bias audits for models).
+\vspace{-3pt}
+\section*{Scoping Activities for Phase I}
+\vspace{-3pt}
+\noindent
+Outline specific, actionable scoping and planning activities to assess the product's readiness for OSE transition, user base viability, and developer community potential. These will inform a potential Phase II proposal. Activities should be feasible within 1 year and \$300K budget.
+\vspace{-3pt}
+
+\noindent
+Specific scoping activities for Phase I include:
+\vspace{-3pt}
+\begin{itemize}
+    \item \textbf{Ecosystem Discovery:} Strategy to evaluate the technological landscape via literature reviews, competitor analyses (e.g., surveying similar projects like [cite examples]), and stakeholder interviews (e.g., 20-30 users/developers). Justify OSE approach (e.g., enables distributed innovation unlike closed systems). Outline methods to identify potential users (e.g., via surveys targeting industry sectors) and new developers (e.g., analyzing GitHub forks and contributions).
+    \item \textbf{Organization and Governance:} Activities to identify models (e.g., benchmarking against Apache or Linux Foundation via case studies), licensing (e.g., evaluating MIT vs. GPL for compatibility), CI/CD infrastructure (e.g., assessing tools like GitHub Actions for asynchronous development), quality/security processes (e.g., drafting ethical guidelines), and sustainability methods (e.g., exploring funding models like donations). Include metrics (e.g., contributor retention rates >50\%).
+    \item \textbf{Risk Analysis/Security:} Build on the plan above with scoping tasks like third-party security audits, privacy impact assessments, and workshops on secure development. Explore tools for identity management (e.g., OAuth) and custody chains (e.g., blockchain for provenance, if applicable).
+    \item \textbf{Community Building:} Activities to engage users and developers, such as virtual workshops (e.g., 2-3 events with 50+ participants), hackathons (e.g., themed on product extensions), and competitions. Identify required capabilities (e.g., expertise in Python/ML for contributors) and mechanisms (e.g., online forums, research networks). Emphasize inclusivity (e.g., scholarships for underrepresented participants).
+\end{itemize}
+
+
+\section*{Community Outreach Plan}
+\vspace{-3pt}
+\noindent
+Outline activities to engage intellectual content developers (e.g., webinars on contribution guidelines) and identify early adopters (e.g., partnerships with organizations via targeted emails and social media campaigns). Include timelines (e.g., quarterly outreach events) and diversity focus (e.g., collaborating with minority-serving institutions).
+\vspace{-3pt}
+
+
+\section*{Evaluation Plan}
+\vspace{-3pt}
+\noindent
+Describe actionable metrics (e.g., \# of new contributors engaged [target: 20+], user adoption growth [target: 50\% increase], governance framework drafts completed) and assessment methods (e.g., pre/post surveys, analytics from repository tools, external mentor feedback). Include quarterly reviews to track progress and adjust plans.
+\vspace{-3pt}
+
+\newpage
 \maketitle
 \thispagestyle{empty} % No page numbers
 \vspace{-45pt}
