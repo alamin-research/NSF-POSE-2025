@@ -93,131 +93,6 @@ The FAME OSE ecosystem will democritize access to advanced thermal-fluid simulat
 \vspace{-45pt}
 \section{Research Motivation and Objectives}
 \label{sec:intro}
-
-\begin{dashtcb}[FlyersRed]{Critical Need}[width=\linewidth]
-Advanced thermal-fluid simulation capabilities are essential for U.S. leadership in additive manufacturing and energy systems, yet remain inaccessible due to proprietary barriers. FAME's open-source approach bridges this gap but requires sustainable ecosystem infrastructure to realize its transformative potential for collaborative research.
-\end{dashtcb}
-
-\textbf{Phase-I Objectives}:
-\begin{enumerate}[label=\textbf{Obj-\arabic*:}, noitemsep]
-    \item Establish NumFOCUS-aligned governance for distributed development
-    \item Onboard 50+ contributors from AM/sCO\textsubscript{2} domains through targeted outreach
-    \item Create GPU-focused training pipeline with HBCU engagement
-    \item Implement revenue-neutral sustainability framework
-\end{enumerate}
-
-\subsection{Technical Value Proposition}
-FAME uniquely integrates three breakthrough capabilities:
-
-\begin{table}[H]
-\caption{Technical Capabilities and Ecosystem Advantages}
-\begin{tblr}{
-  colspec={X[1.2,l]X[2.2,l]},
-  row{1}={bg=FlyersRed,fg=white,font=\bfseries},
-  hlines,
-  row{2-4} = {font=\small}
-}
-Capability & Ecosystem Value \\
-\textbf{ML-Augmented Phase Change} (Dr. Amin) & 
-Enables real-time defect prediction in metal AM; Validated against NIST benchmark cases; 10x faster than commercial solvers \\[15pt]
-
-\textbf{GPU-Accelerated MCRT} (Dr. Schrader) & 
-100x faster radiative heat transfer; Enables particle-laden flow simulation; Critical for sCO\textsubscript{2} solar receivers \\[15pt]
-
-\textbf{CUDA-DEM Coupling} (Dr. Kianimoqadam) & 
-Million+ particle simulations; Heterogeneous CPU/GPU support; Extensible to novel hardware \\
-\end{tblr}
-\end{table}
-
-\subsection{Scientific Significance}
-This project advances fundamental understanding of open science ecosystems:
-
-\vspace{-10pt}
-\begin{itemize}[label=\textbullet, align=left, labelwidth=4em, labelsep=1em, leftmargin=*,noitemsep]
-    \item \textbf{Understanding 1:} How governance structures impact contributor retention in scientific OSEs
-    \item \textbf{Understanding 2:} Technical scaffolding required for adoption of GPU-accelerated CFD
-    \item \textbf{Understanding 3:} Hybrid sustainability models for academic research software
-\end{itemize}
-
-\vspace{-10pt}
-\noindent
-\textbf{Novel Ecosystem Outcomes}:
-\begin{itemize}[label=\textbullet, align=left, labelwidth=4em, labelsep=1em, leftmargin=*,noitemsep]
-    \item First open framework combining ML-CFD with radiation transport
-    \item Replicable model for academic research software transitioning to OSE
-    \item Community-driven validation suite for thermo-fluid simulations
-\end{itemize}
-
-\begin{dashtcb}[FlyersBlue]{Research Goal}[width=\linewidth]
-Establish FAME as the foundational open ecosystem for next-generation thermo-fluid simulations, enabling reproducible research across manufacturing and energy domains through community-driven innovation.
-\end{dashtcb}
-
-\begin{dashtcb}[FlyersRed]{Educational Goal}[width=\linewidth]
-Develop workforce-ready talent in open computational science through GPU programming bootcamps and domain-specific curriculum modules targeting minority-serving institutions.
-\end{dashtcb}
-
-\subsection{Implementation Roadmap}
-\begin{table}[H]
-\caption{Year 1 Ecosystem Development Plan}
-\begin{tblr}{
-  colspec={lX[1.8]X[0.8]},
-  row{1}={bg=azure8,font=\bfseries},
-  hlines, 
-  vlines,
-  row{2-4} = {font=\small}
-}
-Phase & Key Activities & Success Metrics \\
-Governance & 
-Form Technical Steering Committee\\
-Adopt NumFOCUS governance standards\\
-Define contribution tiers\\
-Establish conflict resolution protocol
-& 
-Ratified bylaws\\
-5+ maintainers
-\\[15pt]
-
-Community Building & 
-Target 5 AM/sCO\textsubscript{2} conferences\\
-AFRL/UD hackathons\\
-Industry partnership program\\
-Contributor onboarding pipeline
-& 
-100+ GitHub stars\\
-20+ external PRs
-\\[15pt]
-
-Training Pipeline & 
-Modular Jupyter tutorials; GPU-CUDA bootcamps; HBCU curriculum modules (Central State University, Wilberforce University)
-& 50+ trained users; 20+ tutorial contributions \\
-\end{tblr}
-\end{table}
-
-\subsection{Key Innovations}
-\begin{enumerate}
-    \item \textbf{Hybrid Physics-ML Architecture}: First open framework combining:
-    \begin{itemize}
-        \item Finite-volume thermal solver
-        \item Ray-tracing radiation
-        \item Phase-change models
-        \item ML surrogate capabilities
-    \end{itemize}
-    
-    \item \textbf{GPU-Optimized Workflows}: Unique performance advantages:
-    \begin{align*}
-    \text{Speedup} &= \frac{t_{\text{CPU}}}{t_{\text{GPU}}} \sim \mathcal{O}(10-100\times) \\
-    \text{Scale}   &> 10^6\ \text{particles}
-    \end{align*}
-    
-    \item \textbf{Reproducibility Engine}: Community-validated test cases against:
-    \begin{itemize}
-        \item NIST AM-Bench experiments
-        \item sCO\textsubscript{2} flow loop data
-    \end{itemize}
-\end{enumerate}
-
-\section{Research Motivation and Objectives}
-\label{sec:intro}
 % \todo{Overview figure needs to be changed.}
 
 \begin{wrapfigure}[19]{r}{0.5\textwidth} % 'r' for right, width is adjustable
@@ -450,8 +325,8 @@ The FAME OSE ecosystem will democritize access to advanced thermal-fluid simulat
 			hlines = 1.5pt, vlines = 1.5pt % You can customize the size of hlines and vlines
 %			hline{3,4} = {dashed,fg=gray}, % This is another type of customization for hlines to be dashed gray
 		}
-		\SetCell[r=2]{c} {Research\\Plan} & \SetCell[c=12]{c} Year 1 \\
-		& M1 & M2 & M3 & M4 & M5 & M6 & M7 & M8 & M9 & M10 & M11 & M12 \\
+		\SetCell[r=2]{c} {Research\\Plan} & \SetCell[c=4]{c} Year 1 & & & & \SetCell[c=4]{c} Year 2 & & & & \SetCell[c=4]{c} Year 3 & & & \\
+		& Q1 & Q2 & Q3 & Q4 & Q1 & Q2 & Q3 & Q4 & Q1 & Q2 & Q3 & Q4 \\
 		Objective -1 & \SetCell[c=4]{} 
 		\begin{tikzpicture}[overlay, remember picture]
 			\draw[line width=1mm, double, {Stealth[length=6mm]-Stealth[length=6mm]}] (0,0.1) to ++(3.5,0);
