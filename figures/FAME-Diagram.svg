@@ -59,7 +59,11 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g45">
+       id="g45"
+       inkscape:export-filename="..\proposal\figures\FAME-Diagram.png"
+       inkscape:export-xdpi="30"
+       inkscape:export-ydpi="30"
+       transform="translate(5.5204461,-0.36802974)">
       <g
          id="g18"
          transform="translate(-37.952819,15.045448)">
@@ -423,12 +427,12 @@
          sodipodi:nodetypes="cc" />
       <path
          style="fill:#1a1a1a;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.9;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ConcaveTriangle);paint-order:fill markers stroke"
-         d="m 81.806465,128.27368 9.905291,0"
+         d="m 81.806465,128.27368 h 9.905291"
          id="path44"
          sodipodi:nodetypes="cc" />
       <path
          style="fill:#1a1a1a;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2.9;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ConcaveTriangle);paint-order:fill markers stroke"
-         d="m 190.1139,136.72855 0,16.67143"
+         d="m 190.1139,136.72855 v 16.67143"
          id="path45"
          sodipodi:nodetypes="cc" />
     </g>
