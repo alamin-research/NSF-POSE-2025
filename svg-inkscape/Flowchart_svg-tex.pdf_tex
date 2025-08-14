@@ -1,0 +1,128 @@
+%% Creator: Inkscape 1.4.2 (f4327f4, 2025-05-13), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'Flowchart_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{456.49463654bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.63910887)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{Flowchart_svg-tex.pdf}}%
+    \put(0.65581225,0.54710348){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}YAML/Python Input\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{Flowchart_svg-tex.pdf}}%
+    \put(0.72619637,0.46824172){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}VTK\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{Flowchart_svg-tex.pdf}}%
+    \put(0.71134408,0.39266586){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Physics Identification\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{Flowchart_svg-tex.pdf}}%
+    \put(0.8886297,0.37952223){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}AI / ML\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{Flowchart_svg-tex.pdf}}%
+    \put(0.53375177,0.37952223){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}AI / ML\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{Flowchart_svg-tex.pdf}}%
+    \put(0.71408233,0.27437322){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Matrix Construction\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{Flowchart_svg-tex.pdf}}%
+    \put(0.84994363,0.26122959){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Neural Network\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{Flowchart_svg-tex.pdf}}%
+    \put(0.50509866,0.28751684){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Discretization Technique(FEM/FVM)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{Flowchart_svg-tex.pdf}}%
+    \put(0.71743396,0.17251011){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}PETSc\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{Flowchart_svg-tex.pdf}}%
+    \put(0.90536592,0.17251011){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}JAX\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{Flowchart_svg-tex.pdf}}%
+    \put(0.54310565,0.17251011){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Scipy\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{Flowchart_svg-tex.pdf}}%
+    \put(0.68659025,0.11336378){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Write to VTK\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{Flowchart_svg-tex.pdf}}%
+    \put(0.11174276,0.58982027){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Identifying Geometry\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{Flowchart_svg-tex.pdf}}%
+    \put(0.0836154,0.5076726){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Particle Insertion\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{Flowchart_svg-tex.pdf}}%
+    \put(0.08565266,0.44852628){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Neighbor Search\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{Flowchart_svg-tex.pdf}}%
+    \put(0.08335253,0.39595177){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Contact Forces \& Inter-Particle Conduction\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{Flowchart_svg-tex.pdf}}%
+    \put(0.08552122,0.29080275){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Time integration\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{Flowchart_svg-tex.pdf}}%
+    \put(0.03778795,0.48795716){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Initialization\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{Flowchart_svg-tex.pdf}}%
+    \put(0.03285909,0.27776865){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}GPU\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{Flowchart_svg-tex.pdf}}%
+    \put(0.42223905,0.41525099){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Geometry\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{Flowchart_svg-tex.pdf}}%
+    \put(0.42223905,0.18002388){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Momentum\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{Flowchart_svg-tex.pdf}}%
+    \put(0.42223905,0.32109881){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Energy\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{Flowchart_svg-tex.pdf}}%
+    \put(0.42223905,0.10168786){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Mass\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{Flowchart_svg-tex.pdf}}%
+    \put(0.36309272,0.41525099){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Geometry\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{Flowchart_svg-tex.pdf}}%
+    \put(0.36309272,0.18002388){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Momentum\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{Flowchart_svg-tex.pdf}}%
+    \put(0.36309272,0.32109881){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Energy\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{Flowchart_svg-tex.pdf}}%
+    \put(0.36309272,0.10168786){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Mass\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{Flowchart_svg-tex.pdf}}%
+    \put(0.3310661,0.2451396){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}GPU Local\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{Flowchart_svg-tex.pdf}}%
+    \put(0.4542876,0.24744631){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}CPU Local\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{Flowchart_svg-tex.pdf}}%
+    \put(0.08135908,0.23165643){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Radiation - \textbf{DEM+}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{Flowchart_svg-tex.pdf}}%
+    \put(0.03809466,0.17579601){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Convection/Mass Transfer/Solid-Fluid Forces\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=32]{Flowchart_svg-tex.pdf}}%
+    \put(0.07520348,0.0854336){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Compute CFD Cells Mass/Energy/Momentum Sources\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=33]{Flowchart_svg-tex.pdf}}%
+    \put(0.30569889,0.05175303){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Cortex – CFD Cells\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=34]{Flowchart_svg-tex.pdf}}%
+    \put(0.74418945,0.01918162){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Data Flow\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=35]{Flowchart_svg-tex.pdf}}%
+    \put(0.74418949,0.03889707){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Algorithm Flow\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=36]{Flowchart_svg-tex.pdf}}%
+  \end{picture}%
+\endgroup%
