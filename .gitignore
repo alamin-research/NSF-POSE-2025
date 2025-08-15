@@ -10,5 +10,5 @@
 **/*.synctex.gz
 **/*.upa
 **/*.upb
-*.pdf
+!./figures/*.pdf
 *.synctex*
