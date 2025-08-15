@@ -28,6 +28,7 @@
 \usepackage{soul}
 \usepackage{vmargin}
 \usepackage{wrapfig}
+\usepackage{url}
 %\usepackage[table]{xcolor} 
 
 
@@ -60,14 +61,30 @@
 
 
 
+% Keywords directive note (POSE NSF 24-606): the last line of the Project Summary must begin with 'Keywords:';
+% the FIRST keyword must be the NSF directorate acronym (e.g., CISE or ENG). Using 'CISE' is acceptable here, given the software/OSE focus.
 \begin{document}
-\pagestyle{empty} % To remove page nubering
-% \pagenumbering{gobble} % NO page numbers for research.gov
-\vspace{-4\baselineskip}
+\newpage
 \begin{center}
     \Large\textbf{\textcolor{FlyersRed}{PROJECT SUMMARY}}
 \end{center}
-\vspace{-1.4\baselineskip}
+\vspace{-3pt}
+\section*{Overview}
+\noindent
+ We will establish a particle-resolved open-source ecosystem (OSE) that unifies: (i) FAME (ML-augmented thermal CFD for AM), (ii) DEM+ (high-speed radiative heat transfer for granular media), and (iii) a GPU-based DEM dynamic library with a stable C-ABI for portable coupling to any CFD solver. The OSE emphasizes reproducibility (versioned APIs \& conformance tests), portability (dynamic-library interfaces), and performance (GPU-first kernels).
+\section*{Intellectual Merit}
+\noindent
+The project advances multi-physics modeling by tightly coupling particle-scale radiation and dynamics to continuum thermal CFD, enabling credible melt/sinter predictions and radiatively heated particle-bed studies. Phase I focuses on scoping: ecosystem discovery (I-Corps-for-POSE), governance and contributor pathways, an openly reviewed coupling spec, and feasibility exercises with minimal adapters—laying the foundation for a sustainable OSE.
+\section*{Broader Impacts}
+\noindent
+Open, reproducible tools and tutorials will reduce time/cost for AM part qualification and improve TES/CSP design. Public conformance tests and example cases will accelerate workforce training and technology transfer across universities, national labs, and industry. Results and training materials will be disseminated via open repositories, documentation, and conference tutorials.
+
+\textbf{Keywords:} ENG; additive manufacturing; thermal energy storage; radiative heat transfer; DEM/CFD coupling.
+\vspace{-3pt}
+\pagestyle{empty} % To remove page nubering
+\maketitle
+\pagenumbering{gobble} % NO page numbers for research.gov
+
 
 
 \section*{Overview}
@@ -85,19 +102,21 @@ This project will advance the FAME framework into a sustainable, community-drive
 \section*{Context of OSE}
 \vspace{-3pt}
 \noindent
-The long-term vision for the proposed Open-Source Ecosystem (OSE) around FAME is to create a sustainable, community-driven platform that enables collaborative development of advanced thermo-fluid computational tools for additive manufacturing (AM) and supercritical CO$_2$ (sCO$_2$) energy systems. Guiding principles include fostering inclusivity through open governance, ensuring reproducibility via standardized documentation and testing, promoting ethical AI/ML integration to mitigate biases in simulations, and prioritizing extensibility to support emerging applications like digital twins and real-time process optimization. This OSE will address critical societal and national needs, such as accelerating the adoption of sustainable manufacturing technologies to reduce energy consumption and waste in U.S. industries, and enhancing energy efficiency in sCO$_2$-based systems for clean power generation amid climate challenges. By providing open access to high-fidelity simulation tools, the OSE will bridge gaps in computational resources for underserved research communities, including small businesses and academic institutions, thereby bolstering U.S. competitiveness in advanced manufacturing and renewable energy sectors as outlined in national priorities like the CHIPS and Science Act.
+\textbf{Long-term vision.} Establish a sustainable, \textit{particle-resolved} Open-Source Ecosystem (OSE) that unifies: (i) \textbf{FAME} (ML-augmented thermal CFD for AM), (ii) \textbf{DEM+} (high-speed radiative heat transfer for granular media), and (iii) a \textbf{GPU-based DEM} dynamic library for portable particle dynamics. The OSE's guiding principles are: reproducibility (versioned APIs, conformance tests), portability (stable C-ABI/dynamic library coupling to \emph{any} CFD solver), and performance (GPU-first implementations).\vspace{4pt}
 
-Anticipated broader impacts include economic benefits through reduced experimental costs for AM part qualification, improved workforce readiness via integrated training modules that prepare diverse STEM talent for industry roles, and ethical advancements by embedding security and privacy best practices in open-source workflows. The OSE will promote STEM diversity by targeting outreach to underrepresented groups, such as through partnerships with minority-serving institutions, and contribute to societal goals like sustainable energy transitions by enabling faster innovation in defect-free AM components for aerospace, automotive, and biomedical applications.
-\vspace{-3pt}
+\noindent
+\textbf{Societal/national need.} Particle-resolved thermo-fluid modeling shortens AM part qualification cycles and improves TES/CSP design by accurately predicting melt/sinter transitions and radiative heating in granular media. The OSE lowers cost-to-validate and increases transparency versus proprietary tools, supporting U.S. competitiveness in advanced manufacturing and energy systems.\vspace{4pt}
 
+\noindent
+\textbf{Anticipated broader impacts.} Faster design iteration and reduced experimental costs in LPBF AM; improved TES efficiency via radiatively heated particles; reusable, open benchmarks that strengthen technology transfer across academia, national labs, and industry; and workforce development through openly available training materials and contributor pathways.\vspace{-3pt}
 \begin{enumerate}
-    \item \textbf{Pointer to Existing Open-Source Product:} The product is available in \url{github.com/neoceph/FAME}.
+    \item \textbf{Pointer to Existing Open-Source Product:} The product repository is publicly available (see References Cited).
     \vspace{-3pt}
     \item \textbf{Current Status:} FAME employs a finite volume method (FVM) development model integrated with a convolution hierarchical deep-learning neural network (C-HiDeNN) for thermal-fluid simulations, with testing focused on validation against experimental benchmarks like NIST AM datasets. Dissemination occurs through GitHub hosting, comprehensive documentation via ReadTheDocs (including installation guides using Anaconda and conda environments), and academic publications. The user base is currently limited to a small number of academic researchers (evidenced by initial downloads and feedback from early adopters in AM studies), with no formal releases yet published, indicating an early-stage but robust prototype. The contributor base consists primarily of the core development team (2-3 individuals based on commit history), with open invitations for pull requests to encourage expansion.
     \vspace{-3pt}
     \item \textbf{Problem Addressed and Novelty:} FAME addresses the challenge of accurately predicting melt pool dynamics, cooling rates, and defect formation in laser powder bed fusion (LPBF) AM processes, where process variabilities (e.g., laser power, scan speed) and high computational costs hinder part qualification and certification in critical sectors like aerospace and energy. Its novelty lies in a physics-guided heat source model calibrated via higher-order proper generalized decomposition (HOPGD) and ML techniques, simplifying complex thermal-fluid interactions (e.g., Marangoni flow, vaporization, keyhole formation) into efficient cylindrical representations while coupling with modern ML libraries for surrogate modeling and optimization—superior to proprietary tools or heuristic models that often overlook volumetric energy density correlations. Substantiating evidence includes validation against the NIST AM Bench 2022 Challenge, achieving $<5\%$ relative error in melt pool dimensions and $<20\%$ in cooling rates/time above melting for IN718 builds, demonstrating $30\text{-}50\%$ improvements in prediction accuracy over scaling law-based alternatives, as shown in blind experimental comparisons \cite{aminPhysicsGuidedHeat2024}.
     \vspace{-3pt}
-    \item \textbf{Team Qualifications:} The team is well-qualified to lead this OSE transition, with Principal Investigator Dr. Abdullah A. Amin bringing over 5 years of expertise in physics-based modeling for LPBF AM, including development of FAME and related publications on heat source calibration for defect prediction. As a researcher in the Mechanical and Aerospace Engineering Department at the University of Dayton, Dr. Amin has presented on AM process modeling (e.g., using ANSYS Fluent for thermal simulations) and validated tools against NIST standards. Co-Principal Investigator Dr. Andrew J. Schrader, Assistant Professor and Director of the Dayton Thermal Applications (DaTA) Laboratory at the University of Dayton, contributes deep domain knowledge in thermal sciences and energy systems, with research on concentrated solar-thermal applications, sCO$_2$ systems, and innovative energy technologies. His synergistic activities include mentoring students in computational thermo-fluids and collaborating on open-source initiatives, ensuring the team's ability to formalize governance, engage communities, and sustain the OSE.
+    \item \textbf{Team Qualifications:} The team is well-qualified to lead this OSE transition, with Principal Investigator Dr. Abdullah A. Amin bringing over 5 years of expertise in physics-based modeling for LPBF AM, including development of FAME and related publications on heat source calibration for defect prediction. As a researcher in the Mechanical and Aerospace Engineering Department at the University of Dayton, Dr. Amin has presented on AM process modeling  and validated tools against NIST standards. Co-Principal Investigator Dr. Andrew J. Schrader, Assistant Professor and Director of the Dayton Thermal Applications (DaTA) Laboratory at the University of Dayton, contributes deep domain knowledge in thermal sciences and energy systems, with research on concentrated solar-thermal applications, sCO$_2$ systems, and innovative energy technologies. His synergistic activities include mentoring students in computational thermo-fluids and collaborating on open-source initiatives, ensuring the team's ability to formalize governance, engage communities, and sustain the OSE.
 \end{enumerate}
 \vspace{-3pt}
 \section*{Technical Components of the Proposed OSE}
@@ -117,7 +136,7 @@ In the OSE, FAME serves as the AM-specific module, providing extensible APIs for
 \noindent
 DEM+ is a novel, open-source radiative modeling toolset developed to extend particle-based simulations (e.g., discrete element method, DEM) to concentrated solar power (CSP) and TES environments \cite{schraderDevelopmentExperimentalOptimization2024}. Optimized for desktop workstations rather than high-performance computing (HPC) systems, it addresses the need for accessible, efficient radiative heat transfer modeling in granular media up to 800°C.
 
-Key features include multiple radiative models: an accelerated Monte-Carlo Ray Tracing (MCRT) for high accuracy (application-agnostic but computationally intensive), a database of distance-based approximations for speed (computationally light but application-limited), and a weighted blending approach achieving >90\% reduction in computation time with equivalent accuracy to MCRT. DEM+ was validated using ceramic sintered bauxite proppants, with experimental facilities measuring radiative and flow properties at elevated temperatures.
+Key features include multiple radiative models: an accelerated Monte-Carlo Ray Tracing (MCRT) for high accuracy (application-agnostic but computationally intensive), a database of distance-based approximations for speed (computationally light but application-limited), and a weighted blending approach achieving $>$90\% reduction in computation time with equivalent accuracy to MCRT. DEM+ was validated using ceramic sintered bauxite proppants, with experimental facilities measuring radiative and flow properties at elevated temperatures.
 
 In TES applications, DEM+ optimizes particle heating in dilute curtains or dense packs, supporting equipment design for next-generation CSP facilities. For the OSE, DEM+ provides the radiative heat transfer module, enabling particle warming simulations that feed into downstream processes like melting in AM.
 
@@ -142,9 +161,11 @@ The resulting ecosystem enables seamless workflows: particles heated via DEM+ ra
 \section*{Broader Impacts}
 \vspace{-3pt}
 \noindent
-The FAME OSE ecosystem will democritize access to advanced thermal-fluid simulation and AI-assisted design tools across the manufacturing and energy sectors. A central aim is to train the next generation of researchers, engineers, and developers in open-source software development, digital twin technologies, and thermo-fluid modeling specific to manufacturing and energy. The project will offer annual hands-on workshops and summer schools focused on software sustainability and domain-specific applications. A targeted talent development initiative will engage institutions across various geographic regions through customized outreach and curriculum modules, helping to prepare a skilled, workforce-ready STEM pipeline. Research outcomes and practical use cases will be shared through peer-reviewed publications, conference tutorials, and freely accessible training materials hosted on the project's online platform and amplified through social media. By fostering a community grounded in open science, reproducibility, and collaborative development, this initiative will advance U.S. priorities in energy and manufacturing while ensuring the long-term sustainability of the FAME platform.
-
+This OSE will reduce the time and cost of qualifying AM parts and designing TES/CSP systems by enabling open, reproducible, particle-resolved thermo-fluid simulations. Public training materials (tutorials, example cases, and conformance tests) will accelerate workforce readiness in computational manufacturing and energy. Open benchmarks and validation workflows will improve scientific reproducibility and technology transfer across academia, national labs, and industry. Results and training will be disseminated through peer-reviewed publications, conference tutorials, and an openly accessible documentation portal.
 \section*{Risk Analysis/Security Plan}
+\vspace{4pt}
+\noindent\textbf{Supply-chain security.} Adopt \textit{OpenSSF Best Practices}, generate SBOMs (SPDX), enforce provenance (baseline \textit{SLSA}), sign releases, and maintain a coordinated vulnerability disclosure process with tracked CVEs \cite{foundationopenssfConciseGuideDeveloping, foundationopenssfSourceCodeManagement,SecuringSoftwareSupply2025}. % [CITE: OpenSSF; SLSA; CISA/NSA OSS guidance]
+
 \vspace{-3pt}
 \noindent
 This project identifies several key risks associated with transitioning FAME into an OSE, particularly those related to open-source products involving computational simulations and ML components. Primary risks include security vulnerabilities in the codebase that could lead to inaccurate thermal-fluid predictions, potentially compromising safety in AM processes (e.g., defect formation leading to structural failures in manufactured parts) or sCO$_2$ energy systems (e.g., inefficient heat transfer models). Data privacy concerns arise from handling experimental datasets, such as NIST AM benchmarks, which may contain sensitive material properties or proprietary process parameters. Ethical risks in AI/ML outputs include biases in the physics-guided heat source models, resulting in skewed surrogate predictions that disproportionately affect underrepresented applications in sustainable manufacturing. Additional risks encompass contributor attrition in the current small team, supply chain vulnerabilities from dependencies (e.g., PyTorch or NumPy libraries prone to unpatched exploits), and safety issues if collaboratively released artifacts enable misuse in high-stakes environments like aerospace certification.
@@ -155,6 +176,13 @@ Phase I activities will explore mechanisms to ensure quality, secure modificatio
 \vspace{-3pt}
 
 \section*{Scoping Activities for Phase I}
+\begin{itemize}[leftmargin=*,nosep]
+    \item \textbf{I-Corps for POSE training:} 3--5 team members (including one external OSE mentor) will complete the mandatory training (~41 hours over ~7 weeks) and conduct at least 60 discovery interviews (per NSF guidance), with a target of 100+ interviews; salary time is budgeted.
+\item \textbf{Discovery interviews:} Conduct $100{+}$ structured interviews across AM OEMs, TES/CSP integrators, powder vendors, national labs, and OSS maintainers to validate value propositions and governance expectations.
+    \item \textbf{Timeline \& roles:} Month 1--2 scoping; Month 3--4 public API \\textit{draft and review}; Month 5--6 \\textit{feasibility exercises using existing code and minimal adapters}; Month 7 public roadmap.
+\end{itemize}
+% [CITE: NSF POSE-I solicitation; I-Corps for POSE materials]
+
 \vspace{-3pt}
 \noindent
 Phase I scoping activities will focus on actionable planning to evaluate FAME's readiness for transition into a sustainable OSE, assess the viability of its emerging user base in AM and sCO$_2$ research communities, and identify a distributed developer community for ongoing maintenance and innovation. These activities are designed to be completed within the 1-year award period and \$300K budget, leveraging virtual tools, surveys, and targeted consultations to minimize costs while maximizing insights. Outputs will include a detailed roadmap for Phase II, such as drafted governance documents, community engagement strategies, and a prioritized list of ecosystem gaps. Activities will be coordinated by the PI team, with input from an external mentor experienced in open-source CFD ecosystems, and will incorporate feedback loops through quarterly progress reviews.
@@ -171,28 +199,49 @@ Specific scoping activities for Phase I include:
 \section*{Community Outreach Plan}
 \vspace{-3pt}
 \noindent
-The community outreach plan for the FAME OSE will proactively engage intellectual content developers (e.g., researchers and programmers in CFD and ML) to contribute to tool maintenance and extension, while identifying and onboarding user communities (e.g., AM and sCO$_2$ practitioners in academia, industry, and government labs) as early adopters. Drawing from best practices in open-source scientific software communities, such as those in OpenFOAM and PyTorch ecosystems, the plan emphasizes virtual, low-cost activities to build momentum within the 1-year Phase I timeframe, with a focus on inclusivity and measurable growth. All activities will be amplified through social media (e.g., LinkedIn, X/Twitter, and Reddit communities like r/AdditiveManufacturing and r/MachineLearning) and professional networks (e.g., ASME and AIAA forums) to reach diverse audiences.
+\textbf{Developer-first engagement.} We will target technical contributors and early adopters through: (i) quarterly deep-dive webinars (architecture, coupling APIs, CI pipelines); (ii) hands-on tutorials (AM-Bench reproduction; DEM+ radiation benchmarks; FAME$\leftrightarrow$GPU-DEM minimal coupling); (iii) interoperability hackdays focused on adapter conformance; and (iv) office-hours for prospective maintainers.\vspace{4pt}
 
-To engage developers, quarterly webinars will cover contribution guidelines, FAME's modular architecture, and hands-on tutorials for extending ML models (e.g., integrating new heat source calibrations). An innovative virtual hackathon in Month 6 will challenge participants to develop FAME plugins for sCO$_2$ applications, using platforms like GitHub Classroom for collaborative coding and prizes sponsored by university partners. Developer onboarding will include mentorship pairings with the PI team, targeting 15-20 new contributors through targeted emails to CFD/ML mailing lists.
+\noindent
+\textbf{Channels and partners.} Outreach will emphasize technical venues: ASME/AIAA CFD tracks, SIAM CSE, ICCFD, and domain meetings (AM Bench, RAPID+TCT). We will coordinate with U.S. national labs (e.g., NIST for AM benchmarks; ORNL, LLNL, Sandia for AM/TES modeling) and relevant NASA ISRU/regolith efforts as a potential use case for particle sintering on the Moon (see \cite{muellerAdditiveConstructionUsing2014, ConstructionTechnologyMoon2025}).\vspace{4pt}
 
-For identifying early adopters, initial surveys in Months 1-2 (distributed to 100+ stakeholders via email campaigns and conference booths at events like RAPID + TCT) will map user needs and potential adopters, such as small manufacturers lacking proprietary CFD tools. Partnerships will be forged with organizations like America Makes and NIST AM consortia through joint webinars and pilot use-case demonstrations, showcasing FAME's NIST-validated predictions. Social media campaigns will feature short video tutorials and case studies (e.g., AM defect reduction), aiming to convert viewers into beta testers.
+\noindent
+\textbf{Contributor journey.} Clear contribution guides, labeled ``good first issues,'' mentorship to reviewer/maintainer roles, and a public RFC process for API changes. We will publish reference implementations of conformance tests and maintain a backlog of adapter tasks aligned to the roadmap.\vspace{4pt}
 
-Diversity and inclusion will be prioritized by collaborating with minority-serving institutions (e.g., HBCUs via the National Society of Black Engineers) and women-in-STEM groups (e.g., Society of Women Engineers), offering registration waivers and scholarships for events. Timelines include: Months 1-3 for surveys and initial webinars; Months 4-6 for hackathons and partnerships; Months 7-12 for follow-up evaluations and expanded outreach. Success will be tracked via engagement metrics (e.g., 200+ survey responses, 50+ webinar attendees), ensuring broad participation in advancing FAME's OSE.
-\vspace{-3pt}
+\noindent
+\textbf{Discovery and conversion.} Month 1--2: stakeholder mapping and surveys ($\geq$100 outreach targets); Month 3--4: tutorials \& API RFC; Month 5--6: interoperability hackday; Month 7--12: maintainer cohort formation and pilot feasibility exercises.\vspace{4pt}
 
+\noindent
+\textbf{Success metrics.} Monthly active contributors; time-to-first-PR; number of external maintainers; \# adapters passing conformance tests; AM/TES benchmarks reproduced; industrial/national-lab pilots initiated.
 \section*{Evaluation Plan}
 \vspace{-3pt}
-\noindent
-The evaluation plan for this Phase I project will employ actionable, quantitative, and qualitative metrics to assess progress toward scoping a sustainable OSE for FAME, focusing on product readiness, user base viability, and developer community potential. Drawing from metrics and indicators discussed in the Linux Foundation's report on open source for sustainability \cite{Sandberg2023}, including CHAOSS frameworks for community health and DEI, the plan integrates traditional tracking with novel approaches like AI-driven sentiment analysis on community feedback to provide dynamic insights. Evaluation will inform adaptive adjustments, ensuring alignment with NSF goals, and culminate in a Phase II readiness report. An external mentor will provide independent reviews, while the PI team conducts internal assessments.
+\noindent\textbf{Metrics:} monthly active users/contributors; Time-to-first-PR; number of external maintainers; CI pass rate; SBOM coverage; SLSA level; number of AM/TES benchmarks reproduced; number of industrial pilots; training completions; governance participation 
 
-Key metrics include: number of new contributors engaged (target: 10+ from baseline of 2-3, measured via GitHub commits and pull requests); user adoption growth (target: 50\% increase in downloads/stars, from current low baseline); completion of governance artifacts (e.g., 1 draft framework, 2-3 policy documents); community engagement levels (e.g., 100+ survey responses, 50+ event participants); and ecosystem health scores (e.g., CHAOSS-derived activity index >0.5, incorporating openness via license compatibility and scalability via modular extensions). Innovative metrics will track diversity in participation (e.g., 30\% from underrepresented groups, using self-reported demographics) and innovation impact (e.g., number of novel use cases proposed, assessed via hackathon outputs).
+\vspace{-3pt}
+\noindent
+The evaluation plan for this Phase I project will employ actionable, quantitative, and qualitative metrics to assess progress toward scoping a sustainable OSE for FAME, focusing on product readiness, user base viability, and developer community potential. Drawing from metrics and indicators discussed in the Linux Foundation's report on open source for sustainability \cite{KBMetricsMetrics,MeasuringYourOpen01,OpenSourceMetrics2025}, including CHAOSS frameworks for community health and , the plan integrates traditional tracking with novel approaches like AI-driven sentiment analysis on community feedback to provide dynamic insights. Evaluation will inform adaptive adjustments, ensuring alignment with NSF goals, and culminate in a Phase II readiness report. An external mentor will provide independent reviews, while the PI team conducts internal assessments.
+
+Key metrics include: number of new contributors engaged (target: 10+ from baseline of 2-3, measured via GitHub commits and pull requests); user adoption growth (target: 50\% increase in downloads/stars, from current low baseline); completion of governance artifacts (e.g., 1 draft framework, 2-3 policy documents); community engagement levels (e.g., 100+ survey responses, 50+ event participants); and ecosystem health scores (e.g., CHAOSS-derived activity index $>$0.5, incorporating openness via license compatibility and scalability via modular extensions). Innovative metrics will track g., 30\% from underrepresented groups, using self-reported demographics) and innovation impact (e.g., number of novel use cases proposed, assessed via hackathon outputs).
 
 Assessment methods will combine repository analytics (e.g., GitHub Insights for contribution trends), pre/post-event surveys (e.g., Net Promoter Score for satisfaction), and automated tools like natural language processing for sentiment analysis on forum discussions and feedback forms to gauge inclusivity and ethical concerns. Quarterly reviews (Months 3, 6, 9, 12) will involve stakeholder meetings to analyze data, adjust activities (e.g., pivot outreach if engagement lags), and document lessons learned, ensuring transparent, data-driven progress toward OSE viability.
 \vspace{-3pt}
+
+\section*{Budget Overview (Phase I)}
+\vspace{-3pt}
+\noindent
+POSE Phase I funds will support scoping and planning (not product development). We anticipate the following budget emphases (final details in the budget \& justification):
+\begin{itemize}[leftmargin=*,nosep]
+    \item \textbf{Personnel:} one postdoctoral researcher (lead: DEM solver repository maintenance and coupling specification) at $\sim$\$100{,}000 total (salary+fringe); one M.S. graduate student; partial support for PI/Co-PIs.
+    \item \textbf{Training:} time for the mandatory \emph{I-Corps for POSE} training (3--5 team members), including discovery interviews.
+    \item \textbf{Travel:} I-Corps activities; technical workshops; targeted conference tutorials (e.g., RAPID+TCT, ASME IMECE) aligned to outreach.
+    \item \textbf{Workshops/Events:} virtual tutorials and interoperability hackdays (participant support, materials).
+    \item \textbf{Materials \& Supplies/Services:} CI compute, documentation hosting, and code-signing services.
+\end{itemize}
+\noindent\textit{Note:} No equipment is requested in Phase I, in accordance with the POSE-I solicitation.
 \section*{Prior NSF Support}
 \noindent
 The PI's have no prior NSF support.
 \newpage
-\bibliographystyle{unsrt}
-\bibliography{reference}
+
+\bibliographystyle{plainurl}
+\bibliography{url}
 \end{document}
